@@ -1,7 +1,8 @@
 import unittest
-from htmlnode import *
-class TextHtmlNode(unittest.TestCase):
+from htmlnode import HTMLNode
+class TestTextHtmlNode(unittest.TestCase):
   def test_props_to_html(self):
+    print("start test")
     node =  HTMLNode("a", "node1", None,{"href": "https://www.google.com"})
     node2 = HTMLNode("h1", "node1", None,{"color": "red","font-size": "35px"})
     node3 = HTMLNode("p", "node1", None,None)

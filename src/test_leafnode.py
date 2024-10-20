@@ -1,7 +1,8 @@
 import unittest
-from htmlnode import *
-class TextHtmlNode(unittest.TestCase):
+from htmlnode import LeafNode
+class TestTextLeafNode(unittest.TestCase):
   def test_props_to_html(self):
+    print("start test")
     node = LeafNode("p", "This is a paragraph of text.")
     node2 = LeafNode("a", "Click me!", {"href": "https://www.google.com"})
     node3 = LeafNode("a", "Click me!")
