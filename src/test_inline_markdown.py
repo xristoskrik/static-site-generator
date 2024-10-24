@@ -19,6 +19,3 @@ class TestTextHtmlNode(unittest.TestCase):
     new_nodes = split_nodes_delimiter([node], "*", TextType.ITALIC)
     print(new_nodes)
  
-   
- 
-   

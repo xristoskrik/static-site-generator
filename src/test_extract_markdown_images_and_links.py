@@ -36,9 +36,21 @@ class TestExtractMarkdownLinks(unittest.TestCase):
     print(extract_markdown_links(text))
    except Exception as e:
     print(e)
- 
-   
- 
-   
- 
-   
+class TestSplitNodeImages(unittest.TestCase):
+   def test_split_node_images(self):
+    print("node images")
+    node = TextNode(
+    "This is text with a ![rick roll](https://i.imgur.com/aKaOqIh.gif) and ![obi wan](https://i.imgur.com/fJRm4Vk.jpeg)",
+    TextType.TEXT,
+    )
+    result = split_nodes_image([node])
+    print(result)
+class TestSplitNodeLinks(unittest.TestCase):
+    def test_split_node_links(self):
+     print("node links")
+     node = TextNode(
+      "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)",
+     TextType.TEXT,
+     )
+     result = split_nodes_link([node])
+     print(result)
