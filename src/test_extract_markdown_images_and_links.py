@@ -54,3 +54,10 @@ class TestSplitNodeLinks(unittest.TestCase):
      )
      result = split_nodes_link([node])
      print(result)
+class TestText_To_Textnodes(unittest.TestCase):
+    def test_text_to_textnodes(self):
+     print("text to text node")
+     text = "This is **text** with an *italic* word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)"
+     nodes = text_to_textnodes(text)
+     for node in nodes:
+      print(node)
