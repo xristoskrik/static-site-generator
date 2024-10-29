@@ -1,12 +1,8 @@
-from textnode import TextNode,TextType
-from htmlnode import *
-from inline_markdown import *
-from markdown_blocks import markdown_to_blocks,block_to_block_type,markdown_to_html_node
-
-
+from recursive_copy import recursive_copy
 def main():
- pass
-
+  source_dir = 'static'
+  destination_dir = 'public'
+  recursive_copy(source_dir, destination_dir)
  
 
 main()
